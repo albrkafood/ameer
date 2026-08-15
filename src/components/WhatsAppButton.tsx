@@ -31,10 +31,10 @@ export const WhatsAppButton: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end">
       {/* Interactive WhatsApp Popover Card */}
       {isOpen && (
-        <div className="mb-3 w-80 sm:w-96 bg-slate-900 border-4 border-emerald-500 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-white overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-200">
+        <div className="mb-3 w-[calc(100vw-2rem)] max-w-sm sm:w-96 bg-slate-900 border-4 border-emerald-500 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-white overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-200">
           {/* Card Header */}
           <div className="bg-emerald-600 p-4 border-b-2 border-slate-950 flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -133,28 +133,30 @@ export const WhatsAppButton: React.FC = () => {
       {/* Floating Trigger Button with Badge */}
       <div className="flex items-center gap-2">
         {!isOpen && showNotification && (
-          <div className="hidden sm:flex items-center gap-2 bg-slate-900 border-2 border-emerald-500 px-3 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-white text-xs font-bold animate-bounce">
+          <div className="flex items-center gap-1.5 sm:gap-2 bg-slate-900 border-2 border-emerald-500 px-2.5 sm:px-3 py-1.5 sm:py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-white text-[11px] sm:text-xs font-bold animate-bounce">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-            <span>Chat on WhatsApp ({COMPANY_INFO.whatsapp})</span>
+            <span className="hidden xs:inline">Chat on WhatsApp</span>
+            <span className="xs:hidden">WhatsApp</span>
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 setShowNotification(false);
               }}
-              className="text-slate-400 hover:text-white ml-1"
+              className="text-slate-400 hover:text-white ml-0.5"
+              aria-label="Dismiss"
             >
-              <X className="w-3.5 h-3.5" />
+              <X className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
             </button>
           </div>
         )}
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="group relative flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-400 text-slate-950 border-3 border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all"
+          className="group relative flex items-center justify-center w-13 h-13 sm:w-14 sm:h-14 bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 border-3 border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all"
           aria-label="Open WhatsApp live support"
           title="Direct WhatsApp with M/s AZMAT ULLAH & BROTHERS"
         >
-          <MessageCircle className="w-8 h-8 fill-current text-slate-950" />
+          <MessageCircle className="w-7 h-7 sm:w-8 sm:h-8 fill-current text-slate-950" />
           <span className="absolute -top-1 -right-1 w-4 h-4 bg-amber-400 border-2 border-slate-950 rounded-full flex items-center justify-center text-[9px] font-black text-slate-950">
             1
           </span>
