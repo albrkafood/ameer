@@ -1,6 +1,8 @@
 {
   "name": "Asmatullah & Brothers Government Construction Co.",
-  "description": "Official website for Asmatullah & Brothers Government Construction Company, specializing in Buildings, Road Infrastructure, and Housing Society Development.",
+  "description": "Official portal of M/s AZMAT ULLAH & BROTHERS (PEC Lic# 15623 Category C4, FBR NTN: 1720103503831). Premier Pakistan Govt Contractor for Highways (PKHA), Civil Courts, Multistory Complexes, Irrigation Flood Protection & Heavy Machinery Fleet.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
