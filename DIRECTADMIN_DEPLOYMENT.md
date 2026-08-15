@@ -51,5 +51,17 @@ The build includes a ready-to-use `.htaccess` file in `public/` that handles:
 
 ---
 
+## Troubleshooting Build Errors on Shared Servers
+
+If you run `npm run build` on a server with strict CPU thread or memory limits and encounter `rayon-core` or `Resource temporarily unavailable` (OS code 11), run:
+```bash
+RAYON_NUM_threads=1 npm run build
+```
+*(This is already pre-configured in `package.json`).*
+
+Alternatively, because this is a client-side React SPA, **you don't need Node.js installed on your DirectAdmin server at all**. Simply run `npm run build` on your local PC or download the project ZIP from AI Studio, and upload the generated `dist/` directory contents directly to `public_html`.
+
+---
+
 ## Verification
 Visit your domain (e.g., `https://yourdomain.com`). The website will load instantly with all images, navigation, and contact forms functioning smoothly.
