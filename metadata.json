@@ -1,0 +1,6 @@
+{
+  "name": "Asmatullah & Brothers Government Construction Co.",
+  "description": "Official website for Asmatullah & Brothers Government Construction Company, specializing in Buildings, Road Infrastructure, and Housing Society Development.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
