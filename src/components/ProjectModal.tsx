@@ -97,53 +97,71 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             </div>
           </div>
 
+          {/* Scope of Work */}
+          {project.scopeOfWork && (
+            <div>
+              <h4 className="text-xs font-black text-slate-300 uppercase tracking-widest mb-2 bg-slate-950 p-1.5 border border-slate-800 inline-block">
+                Official Scope of Work
+              </h4>
+              <p className="text-amber-400 font-bold text-sm bg-slate-950 p-3 border border-slate-800">
+                {project.scopeOfWork}
+              </p>
+            </div>
+          )}
+
           {/* Description */}
-          <div>
-            <h4 className="text-xs font-black text-slate-300 uppercase tracking-widest mb-2 bg-slate-950 p-1.5 border border-slate-800 inline-block">
-              Project Description
-            </h4>
-            <p className="text-slate-200 text-sm font-medium leading-relaxed mt-1">{project.description}</p>
-          </div>
+          {project.description && (
+            <div>
+              <h4 className="text-xs font-black text-slate-300 uppercase tracking-widest mb-2 bg-slate-950 p-1.5 border border-slate-800 inline-block">
+                Project Description
+              </h4>
+              <p className="text-slate-200 text-sm font-medium leading-relaxed mt-1">{project.description}</p>
+            </div>
+          )}
 
           {/* Technical Specifications */}
-          <div>
-            <h4 className="text-xs font-black text-slate-300 uppercase tracking-widest mb-3 bg-slate-950 p-1.5 border border-slate-800 inline-block">
-              Technical Specifications &amp; Scope
-            </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-bold">
-              {project.specifications.map((spec, idx) => (
-                <div
-                  key={idx}
-                  className="bg-slate-950 p-3 border border-slate-800 flex justify-between items-center"
-                >
-                  <span className="text-slate-400 uppercase text-[10px]">{spec.label}:</span>
-                  <span className="font-black text-amber-400 text-right">{spec.value}</span>
-                </div>
-              ))}
+          {project.specifications && project.specifications.length > 0 && (
+            <div>
+              <h4 className="text-xs font-black text-slate-300 uppercase tracking-widest mb-3 bg-slate-950 p-1.5 border border-slate-800 inline-block">
+                Technical Specifications &amp; Parameters
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-bold">
+                {project.specifications.map((spec, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-slate-950 p-3 border border-slate-800 flex justify-between items-center"
+                  >
+                    <span className="text-slate-400 uppercase text-[10px]">{spec.label}:</span>
+                    <span className="font-black text-amber-400 text-right">{spec.value}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Highlights */}
-          <div>
-            <h4 className="text-xs font-black text-slate-300 uppercase tracking-widest mb-2 bg-slate-950 p-1.5 border border-slate-800 inline-block">
-              Engineering Highlights
-            </h4>
-            <ul className="space-y-2 text-xs font-semibold text-slate-200">
-              {project.highlights.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2 bg-slate-950 p-2 border border-slate-800">
-                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {project.highlights && project.highlights.length > 0 && (
+            <div>
+              <h4 className="text-xs font-black text-slate-300 uppercase tracking-widest mb-2 bg-slate-950 p-1.5 border border-slate-800 inline-block">
+                Engineering Highlights
+              </h4>
+              <ul className="space-y-2 text-xs font-semibold text-slate-200">
+                {project.highlights.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2 bg-slate-950 p-2 border border-slate-800">
+                    <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         {/* Modal Footer */}
         <div className="bg-slate-950 px-6 py-4 border-t-2 border-slate-800 flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-slate-300">
             <ShieldCheck className="w-4 h-4 text-amber-400" />
-            <span>Executed by Asmatullah &amp; Brothers Govt. Construction Co.</span>
+            <span>M/s AZMAT ULLAH &amp; BROTHERS (Govt: Contractor)</span>
           </div>
 
           <div className="flex items-center gap-3">

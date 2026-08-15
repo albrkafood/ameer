@@ -14,6 +14,7 @@ import {
   Navigation,
   Send,
   CheckCircle2,
+  MessageCircle,
 } from 'lucide-react';
 
 interface ContactSectionProps {
@@ -102,9 +103,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ currentLang }) =
                 </div>
                 <div>
                   <h4 className="font-black text-xs uppercase tracking-widest text-amber-400 bg-slate-950 p-1 border border-slate-800 inline-block mb-1">
-                    Islamabad Executive Head Office
+                    Registered Office &amp; Engineering HQ
                   </h4>
-                  <p className="text-xs font-semibold text-slate-200 leading-relaxed">{COMPANY_INFO.headOfficeAddress}</p>
+                  <p className="text-xs font-semibold text-slate-200 leading-relaxed">{COMPANY_INFO.address}</p>
                 </div>
               </div>
 
@@ -117,9 +118,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ currentLang }) =
                     Direct Phone Lines
                   </h4>
                   <div className="text-xs text-amber-400 font-black mt-1 space-y-1">
-                    <p><a href={`tel:${COMPANY_INFO.phone1}`} className="hover:underline bg-slate-950 p-1 border border-slate-800 block">{COMPANY_INFO.phone1} (CEO / Direct)</a></p>
-                    <p><a href={`tel:${COMPANY_INFO.phone2}`} className="hover:underline bg-slate-950 p-1 border border-slate-800 block">{COMPANY_INFO.phone2} (Chief Engineer)</a></p>
-                    <p className="text-slate-300 font-bold uppercase text-[10px]">Landline: {COMPANY_INFO.landline}</p>
+                    <p><a href={`tel:${COMPANY_INFO.phone1}`} className="hover:underline bg-slate-950 p-1 border border-slate-800 block">{COMPANY_INFO.phone1} (Managing Partner / Direct)</a></p>
+                    <p><a href={`tel:${COMPANY_INFO.phone2}`} className="hover:underline bg-slate-950 p-1 border border-slate-800 block">{COMPANY_INFO.phone2} (WhatsApp / Site Operations)</a></p>
                   </div>
                 </div>
               </div>
@@ -149,6 +149,24 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ currentLang }) =
                   </h4>
                   <p className="text-xs font-semibold text-slate-300 mt-1">Monday - Saturday: 8:00 AM - 6:00 PM (Emergency Site Support 24/7)</p>
                 </div>
+              </div>
+
+              {/* Direct WhatsApp Contact Box */}
+              <div className="pt-4 border-t-2 border-slate-800">
+                <a
+                  href={`https://wa.me/${COMPANY_INFO.whatsapp.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hello M/s AZMAT ULLAH & BROTHERS, I would like to inquire about construction services / tender.')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 p-3.5 border-2 border-slate-950 font-black uppercase text-xs tracking-wider flex items-center justify-between shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <MessageCircle className="w-5 h-5 fill-current" />
+                    <span>Instant WhatsApp Chat</span>
+                  </div>
+                  <span className="font-mono font-bold bg-slate-950 text-emerald-400 px-2 py-0.5 border border-slate-950 text-[11px]">
+                    {COMPANY_INFO.whatsapp}
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -354,16 +372,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ currentLang }) =
 
                 <div className="grid grid-cols-2 gap-2 text-xs font-bold uppercase pt-2 w-full max-w-md">
                   <span className="bg-slate-950 p-2.5 border border-slate-800 text-slate-200">
-                    📍 Islamabad HQ
+                    📍 Nowshera Main HQ
                   </span>
                   <span className="bg-slate-950 p-2.5 border border-slate-800 text-slate-200">
-                    📍 Peshawar Branch
+                    📍 Peshawar Site Division
                   </span>
                   <span className="bg-slate-950 p-2.5 border border-slate-800 text-slate-200">
-                    📍 Swat Regional Office
+                    📍 Mardan / Swabi Office
                   </span>
                   <span className="bg-slate-950 p-2.5 border border-slate-800 text-slate-200">
-                    📍 Quetta Site Division
+                    📍 Dir &amp; Malakand Site Camp
                   </span>
                 </div>
               </div>

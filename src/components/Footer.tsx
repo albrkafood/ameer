@@ -9,6 +9,7 @@ import {
   MapPin,
   ArrowUp,
   FileText,
+  MessageCircle,
 } from 'lucide-react';
 
 interface FooterProps {
@@ -40,21 +41,27 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenTenderModal }
               </div>
               <div>
                 <h3 className="text-xl font-black uppercase text-white font-grotesk leading-none">
-                  ASMATULLAH &amp; BROTHERS
+                  {COMPANY_INFO.name}
                 </h3>
                 <p className="text-[10px] font-black text-amber-400 uppercase tracking-widest mt-0.5">
-                  Government Construction Company
+                  Govt: Contractor | PEC #{COMPANY_INFO.pecLicense.split('|')[0].replace('PEC Licence No:', '').trim()}
                 </p>
               </div>
             </div>
 
             <p className="text-xs font-medium text-slate-300 leading-relaxed max-w-sm">
-              Registered with Pakistan Engineering Council under Category C1 (No Limit). Specialized in turn-key government buildings, dual carriageway roads, and master housing society infrastructure.
+              Registered with Pakistan Engineering Council under {COMPANY_INFO.pecCategory}. Specialized in turn-key judicial court complexes, provincial highways, flood protection walls, and high-rise residential buildings.
             </p>
 
-            <div className="flex items-center gap-2 pt-2 text-xs font-bold uppercase tracking-wider bg-slate-900 p-2.5 border border-slate-800 w-fit">
-              <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span className="text-slate-200">{COMPANY_INFO.pecLicense}</span>
+            <div className="space-y-1.5 pt-1 text-xs">
+              <div className="flex items-center gap-2 bg-slate-900 p-2 border border-slate-800">
+                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span className="text-slate-200 font-bold">{COMPANY_INFO.pecLicense}</span>
+              </div>
+              <div className="flex items-center gap-2 bg-slate-900 p-2 border border-slate-800">
+                <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
+                <span className="text-slate-300 text-[11px] font-medium">{COMPANY_INFO.address}</span>
+              </div>
             </div>
           </div>
 
@@ -65,23 +72,28 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenTenderModal }
             </h4>
             <ul className="space-y-2 text-slate-300">
               <li>
-                <button onClick={() => scrollToSection('services')} className="hover:text-amber-400 transition-colors text-left">
-                  Government Building Construction
+                <button onClick={() => scrollToSection('projects')} className="hover:text-amber-400 transition-colors text-left">
+                  Civil High Court &amp; Buildings (4)
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="hover:text-amber-400 transition-colors text-left">
-                  Highways &amp; Asphalt Road Works
+                <button onClick={() => scrollToSection('projects')} className="hover:text-amber-400 transition-colors text-left">
+                  PKHA Highways &amp; Road Works (10)
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="hover:text-amber-400 transition-colors text-left">
-                  Housing Society Infrastructure
+                <button onClick={() => scrollToSection('projects')} className="hover:text-amber-400 transition-colors text-left">
+                  Irrigation &amp; Flood Walls (3)
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('machinery')} className="hover:text-amber-400 transition-colors text-left">
-                  Heavy Equipment Machinery Rental
+                <button onClick={() => scrollToSection('staff')} className="hover:text-amber-400 transition-colors text-left">
+                  Engineering Officers &amp; Staff (9)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection('licenses')} className="hover:text-amber-400 transition-colors text-left">
+                  PEC &amp; FBR Accreditation
                 </button>
               </li>
               <li>
@@ -98,10 +110,19 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenTenderModal }
               Tender &amp; Procurement
             </h4>
             <p className="text-slate-300 font-medium text-xs normal-case">
-              Direct procurement queries &amp; BOQ tender document submissions:
+              Direct procurement queries, official invitations, &amp; BOQ submissions:
             </p>
 
             <div className="space-y-2 text-slate-200">
+              <a
+                href={`https://wa.me/${COMPANY_INFO.whatsapp.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hello M/s AZMAT ULLAH & BROTHERS, I would like to inquire about a project / tender.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 p-2 border-2 border-slate-950 font-black shadow-[2px_2px_0px_0px_rgba(255,255,255,0.2)] transition-all"
+              >
+                <MessageCircle className="w-4 h-4 fill-current" />
+                <span>WhatsApp: {COMPANY_INFO.whatsapp}</span>
+              </a>
               <p className="flex items-center gap-2 bg-slate-900 p-2 border border-slate-800">
                 <Phone className="w-4 h-4 text-amber-400 shrink-0" />
                 <a href={`tel:${COMPANY_INFO.phone1}`} className="hover:underline font-black">{COMPANY_INFO.phone1}</a>
@@ -124,7 +145,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenTenderModal }
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t-2 border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-bold uppercase tracking-wider text-slate-400">
-          <p>© {new Date().getFullYear()} Asmatullah &amp; Brothers Govt. Construction Company.</p>
+          <p>© {new Date().getFullYear()} M/s AZMAT ULLAH &amp; BROTHERS (Govt: Contractor).</p>
 
           <button
             onClick={scrollToTop}

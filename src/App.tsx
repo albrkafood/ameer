@@ -15,6 +15,7 @@ import { CostCalculator } from './components/CostCalculator';
 import { Certifications } from './components/Certifications';
 import { ContactSection } from './components/ContactSection';
 import { TenderRFQForm } from './components/TenderRFQForm';
+import { WhatsAppButton } from './components/WhatsAppButton';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -94,6 +95,9 @@ export default function App() {
         currentLang={currentLang}
         onOpenTenderModal={handleOpenTenderModal}
       />
+
+      {/* Floating Interactive WhatsApp Direct Support Button */}
+      <WhatsAppButton />
 
       {/* Official Tender Submission / RFQ Modal */}
       <TenderRFQForm

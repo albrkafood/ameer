@@ -1,25 +1,48 @@
 export type Language = 'en' | 'ur' | 'ps';
 
-export type ServiceCategory = 'building' | 'road' | 'society' | 'machinery';
+export type ServiceCategory = 'building' | 'road' | 'society' | 'irrigation' | 'machinery';
+
+export interface StaffMember {
+  sNo: number;
+  name: string;
+  position: string;
+  department?: string;
+}
+
+export interface ExpertiseItem {
+  id: number;
+  name: string;
+  iconName: string;
+  description: string;
+}
+
+export interface ServicePillar {
+  id: string;
+  title: string;
+  category: string;
+  items: string[];
+}
 
 export interface Project {
+  sNo?: number;
   id: string;
   title: string;
   titleUr?: string;
   titlePs?: string;
   category: ServiceCategory;
-  client: string; // e.g. C&W Department, Capital Development Authority, NHA, Private Housing Society
+  client: string; // e.g. C&W Department, PKHA, Irrigation Dept, TMA, Private
   location: string;
   contractValue: string;
-  completionYear: string;
-  status: 'Completed' | 'Ongoing' | 'Under Bidding';
-  description: string;
-  specifications: {
+  scopeOfWork: string;
+  completionYear?: string;
+  status: 'Completed' | 'In Progress' | 'Finishing Work in Progress' | '70% Completed' | '90% Completed';
+  description?: string;
+  specifications?: {
     label: string;
     value: string;
   }[];
   imageUrl: string;
-  highlights: string[];
+  highlights?: string[];
 }
 
 export interface Equipment {
@@ -41,6 +64,8 @@ export interface Certification {
   validity: string;
   category: string;
   description: string;
+  serialNo?: string;
+  specializationCodes?: string[];
 }
 
 export interface Milestone {

@@ -11,6 +11,7 @@ import {
   FileText,
   CheckCircle2,
   PhoneCall,
+  MessageCircle,
 } from 'lucide-react';
 
 interface HeroProps {
@@ -146,53 +147,63 @@ export const Hero: React.FC<HeroProps> = ({
         </div>
 
         {/* Action CTAs */}
-        <div className="mt-10 flex flex-wrap items-center gap-4">
+        <div className="mt-10 flex flex-wrap items-center gap-3.5">
           <button
             onClick={onOpenTenderModal}
-            className="flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-slate-950 px-7 py-4 border-2 border-slate-950 font-black uppercase text-sm md:text-base tracking-wider shadow-[5px_5px_0px_0px_rgba(255,255,255,0.2)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all active:translate-x-0 active:translate-y-0"
+            className="flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-slate-950 px-6 py-3.5 border-2 border-slate-950 font-black uppercase text-xs md:text-sm tracking-wider shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all active:translate-x-0 active:translate-y-0"
           >
-            <FileText className="w-5 h-5" />
+            <FileText className="w-4 h-4" />
             <span>{t.requestQuote}</span>
-            <ChevronRight className="w-5 h-5 ml-1" />
+            <ChevronRight className="w-4 h-4 ml-1" />
           </button>
+
+          <a
+            href={`https://wa.me/${COMPANY_INFO.whatsapp.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hello M/s AZMAT ULLAH & BROTHERS, I would like to inquire about construction services / tender quotation.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-5 py-3.5 border-2 border-slate-950 font-black uppercase text-xs md:text-sm tracking-wider shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all"
+          >
+            <MessageCircle className="w-4 h-4 fill-current" />
+            <span>Chat on WhatsApp</span>
+          </a>
 
           <button
             onClick={onScrollToCalculator}
-            className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-amber-400 border-2 border-amber-400 px-6 py-4 font-black uppercase text-sm md:text-base tracking-wider shadow-[5px_5px_0px_0px_rgba(251,191,36,0.3)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all"
+            className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-amber-400 border-2 border-amber-400 px-5 py-3.5 font-black uppercase text-xs md:text-sm tracking-wider shadow-[4px_4px_0px_0px_rgba(251,191,36,0.3)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all"
           >
-            <Calculator className="w-5 h-5 text-amber-400" />
+            <Calculator className="w-4 h-4 text-amber-400" />
             <span>{t.calculateCost}</span>
           </button>
 
           <a
             href={`tel:${COMPANY_INFO.phone1}`}
-            className="flex items-center gap-2 text-slate-200 hover:text-amber-400 font-black uppercase text-xs tracking-wider px-4 py-3 border border-slate-700 bg-slate-900/60 hover:bg-slate-900 transition-all"
+            className="flex items-center gap-2 text-slate-200 hover:text-amber-400 font-bold uppercase text-xs tracking-wider px-4 py-3.5 border border-slate-800 bg-slate-900/80 hover:bg-slate-900 transition-all"
           >
-            <PhoneCall className="w-4 h-4 text-emerald-400" />
-            <span>WhatsApp / Phone Inquiry</span>
+            <PhoneCall className="w-3.5 h-3.5 text-amber-400" />
+            <span>Call: {COMPANY_INFO.phone1}</span>
           </a>
         </div>
 
         {/* Key Numerical Stats Banner */}
         <div className="mt-16 pt-8 border-t-2 border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="bg-slate-900/80 p-4 border-l-4 border-amber-400 flex flex-col">
-            <span className="text-4xl md:text-5xl font-black text-amber-400 font-grotesk">25+</span>
-            <span className="text-xs uppercase font-extrabold tracking-wider text-slate-300 mt-1">Years Track Record</span>
+            <span className="text-3xl md:text-5xl font-black text-amber-400 font-grotesk">1.39B+</span>
+            <span className="text-xs uppercase font-extrabold tracking-wider text-slate-300 mt-1">Portfolio (PKR)</span>
           </div>
 
           <div className="bg-slate-900/80 p-4 border-l-4 border-white flex flex-col">
-            <span className="text-4xl md:text-5xl font-black text-white font-grotesk">185+</span>
-            <span className="text-xs uppercase font-extrabold tracking-wider text-slate-300 mt-1">Projects Executed</span>
+            <span className="text-3xl md:text-5xl font-black text-white font-grotesk">19</span>
+            <span className="text-xs uppercase font-extrabold tracking-wider text-slate-300 mt-1">Documented Projects</span>
           </div>
 
           <div className="bg-slate-900/80 p-4 border-l-4 border-amber-400 flex flex-col">
-            <span className="text-4xl md:text-5xl font-black text-amber-400 font-grotesk">140+</span>
+            <span className="text-3xl md:text-5xl font-black text-amber-400 font-grotesk">140+</span>
             <span className="text-xs uppercase font-extrabold tracking-wider text-slate-300 mt-1">Heavy Machinery Units</span>
           </div>
 
-          <div className="bg-slate-900/80 p-4 border-l-4 border-white flex flex-col">
-            <span className="text-4xl md:text-5xl font-black text-white font-grotesk">PEC C1</span>
-            <span className="text-xs uppercase font-extrabold tracking-wider text-slate-300 mt-1">No Limit Govt License</span>
+          <div className="bg-slate-900/80 p-4 border-l-4 border-amber-400 flex flex-col">
+            <span className="text-3xl md:text-5xl font-black text-white font-grotesk">PEC C4</span>
+            <span className="text-xs uppercase font-extrabold tracking-wider text-slate-300 mt-1">Licence # 15623</span>
           </div>
         </div>
       </div>

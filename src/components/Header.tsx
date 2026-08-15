@@ -12,6 +12,7 @@ import {
   HardHat,
   ChevronRight,
   Send,
+  MessageCircle,
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -39,65 +40,62 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-50 w-full bg-slate-950 text-white border-b-2 border-amber-400/60 shadow-2xl">
       {/* Top Bar - Credentials & Fast Direct Contact */}
-      <div className="bg-amber-400 text-slate-950 px-4 py-1.5 text-xs font-black uppercase tracking-wider border-b-2 border-slate-950">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-3">
-            <span className="flex items-center gap-1.5 font-black bg-slate-950 text-amber-400 px-2.5 py-0.5 border border-slate-950 text-[11px]">
-              <ShieldCheck className="w-4 h-4 text-amber-400" />
-              {COMPANY_INFO.pecLicense}
+      <div className="bg-amber-400 text-slate-950 px-3 sm:px-4 py-1.5 text-xs font-black uppercase tracking-wider border-b-2 border-slate-950">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+          {/* Left Side: PEC Badge & Accreditation */}
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+            <span className="inline-flex items-center gap-1 font-black bg-slate-950 text-amber-400 px-2 py-0.5 border border-slate-950 text-[10px] sm:text-[11px] whitespace-nowrap shrink-0 shadow-[1px_1px_0px_0px_rgba(0,0,0,0.3)]">
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+              <span>{COMPANY_INFO.pecLicense}</span>
             </span>
-            <span className="hidden sm:inline-block font-extrabold text-slate-950 tracking-tight">
-              Approved Govt Contractor: C&amp;W | PWD | NHA
+            <span className="hidden md:inline-block font-black text-slate-950 tracking-tight text-[11px] truncate">
+              Govt Contractor: C&amp;W | PKHA | Irrigation
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-slate-950">
+          {/* Right Side: Phone & Language Switcher */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-auto">
             <a
               href={`tel:${COMPANY_INFO.phone1}`}
-              className="flex items-center gap-1 hover:underline font-black tracking-wide"
+              className="hidden sm:flex items-center gap-1 hover:underline font-black tracking-wide text-xs"
             >
               <Phone className="w-3.5 h-3.5" />
               <span>{COMPANY_INFO.phone1}</span>
             </a>
-            <span className="hidden md:inline font-black">|</span>
-            <a
-              href={`mailto:${COMPANY_INFO.email}`}
-              className="hidden md:flex items-center gap-1 hover:underline font-bold"
-            >
-              <Mail className="w-3.5 h-3.5" />
-              <span>{COMPANY_INFO.email}</span>
-            </a>
 
-            {/* Language Switcher */}
-            <div className="flex items-center gap-1 bg-slate-950 p-1 border border-slate-900 text-xs">
-              <Globe className="w-3.5 h-3.5 text-amber-400 ml-1 mr-0.5" />
+            {/* Language Switcher - Styled, Right-Aligned & Mobile-Friendly */}
+            <div className="flex items-center bg-slate-950 p-0.5 sm:p-1 border border-slate-900 text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,0.4)]">
+              <Globe className="w-3.5 h-3.5 text-amber-400 ml-1 mr-0.5 hidden xs:inline-block shrink-0" />
               <button
                 onClick={() => onLanguageChange('en')}
-                className={`px-2 py-0.5 font-black text-[10px] tracking-wider transition-all ${
+                className={`px-2 py-1 font-black text-[10px] sm:text-[11px] tracking-wider transition-all min-w-[28px] ${
                   currentLang === 'en'
-                    ? 'bg-amber-400 text-slate-950'
-                    : 'text-amber-400/70 hover:text-amber-400'
+                    ? 'bg-amber-400 text-slate-950 shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]'
+                    : 'text-amber-400 hover:text-white'
                 }`}
+                title="English"
               >
                 EN
               </button>
               <button
                 onClick={() => onLanguageChange('ur')}
-                className={`px-2 py-0.5 font-black text-[10px] tracking-wider transition-all ${
+                className={`px-2 py-1 font-black text-[10px] sm:text-[11px] tracking-wider transition-all min-w-[28px] ${
                   currentLang === 'ur'
-                    ? 'bg-amber-400 text-slate-950'
-                    : 'text-amber-400/70 hover:text-amber-400'
+                    ? 'bg-amber-400 text-slate-950 shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]'
+                    : 'text-amber-400 hover:text-white'
                 }`}
+                title="اردو"
               >
                 اردو
               </button>
               <button
                 onClick={() => onLanguageChange('ps')}
-                className={`px-2 py-0.5 font-black text-[10px] tracking-wider transition-all ${
+                className={`px-2 py-1 font-black text-[10px] sm:text-[11px] tracking-wider transition-all min-w-[28px] ${
                   currentLang === 'ps'
-                    ? 'bg-amber-400 text-slate-950'
-                    : 'text-amber-400/70 hover:text-amber-400'
+                    ? 'bg-amber-400 text-slate-950 shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]'
+                    : 'text-amber-400 hover:text-white'
                 }`}
+                title="پښتو"
               >
                 پښتو
               </button>
@@ -119,11 +117,11 @@ export const Header: React.FC<HeaderProps> = ({
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-lg md:text-xl font-black uppercase tracking-tighter text-white font-grotesk leading-none">
-                ASMATULLAH &amp; BROTHERS
+                {COMPANY_INFO.name}
               </h1>
             </div>
             <p className="text-[10px] font-black text-amber-400 uppercase tracking-widest mt-1">
-              Government Construction Co.
+              Govt: Contractor | PEC #{COMPANY_INFO.pecLicense.split('|')[0].replace('PEC Licence No:', '').trim()}
             </p>
           </div>
         </div>
@@ -175,7 +173,18 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* CTA Buttons */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden sm:flex items-center gap-2.5">
+          <a
+            href={`https://wa.me/${COMPANY_INFO.whatsapp.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hello M/s AZMAT ULLAH & BROTHERS, I would like to discuss a project / tender.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-3.5 py-2 border-2 border-slate-950 font-black uppercase text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all"
+            title="Chat on WhatsApp"
+          >
+            <MessageCircle className="w-4 h-4 fill-current" />
+            <span>WhatsApp</span>
+          </a>
+
           <button
             onClick={onOpenTenderModal}
             className="flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-slate-950 px-4 py-2 border-2 border-slate-950 font-black uppercase text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all active:translate-x-0 active:translate-y-0"
@@ -251,20 +260,30 @@ export const Header: React.FC<HeaderProps> = ({
           </nav>
 
           <div className="pt-2 flex flex-col gap-2">
+            <a
+              href={`https://wa.me/${COMPANY_INFO.whatsapp.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Hello M/s AZMAT ULLAH & BROTHERS, I would like to discuss a project / tender.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 py-2.5 font-black text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 border-2 border-slate-950 shadow-[2px_2px_0px_0px_rgba(255,255,255,0.2)]"
+            >
+              <MessageCircle className="w-4 h-4 fill-current" />
+              <span>Chat on WhatsApp ({COMPANY_INFO.whatsapp})</span>
+            </a>
+
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenTenderModal();
               }}
-              className="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 py-2.5 rounded-lg font-bold text-center flex items-center justify-center gap-2"
+              className="w-full bg-amber-400 hover:bg-amber-300 text-slate-950 py-2.5 font-black text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 border-2 border-slate-950 shadow-[2px_2px_0px_0px_rgba(255,255,255,0.2)]"
             >
-              <Send className="w-4 h-4" />
+              <FileText className="w-4 h-4" />
               <span>{t.tender}</span>
             </button>
 
             <a
               href={`tel:${COMPANY_INFO.phone1}`}
-              className="w-full bg-slate-700 hover:bg-slate-600 text-white py-2.5 rounded-lg font-semibold text-center flex items-center justify-center gap-2 text-sm"
+              className="w-full bg-slate-900 hover:bg-slate-800 text-white py-2.5 border border-slate-700 font-bold text-center flex items-center justify-center gap-2 text-xs uppercase"
             >
               <Phone className="w-4 h-4 text-amber-400" />
               <span>{t.callNow}: {COMPANY_INFO.phone1}</span>
