@@ -7,6 +7,19 @@ import riverBridgeImg from '../assets/images/river_bridge_construction_178616565
 import paradiseHousingImg from '../assets/images/paradise_valley_housing_1786165667471.jpg';
 import modernCivicComplexImg from '../assets/images/modern_civic_complex_1786817235619.jpg';
 import pkhaHighwayAsphaltImg from '../assets/images/pkha_highway_asphalt_1786817253093.jpg';
+import tanwalHighwayRoadImg from '../assets/images/tanwal_highway_road_1786859919928.jpg';
+import haripurPccRoadImg from '../assets/images/haripur_pcc_road_1786860323599.jpg';
+import abbottabadMairaRoadImg from '../assets/images/abbottabad_maira_road_1786860488074.jpg';
+import bandaPirRoadImg from '../assets/images/banda_pir_road_1786860503906.jpg';
+import terhanaBalaRoadImg from '../assets/images/terhana_bala_road_1786860518709.jpg';
+import haripurCanalRoadImg from '../assets/images/haripur_canal_road_1786860546857.jpg';
+import shallyValleyHouseImg from '../assets/images/shally_valley_house_1786860825966.jpg';
+import chitaMairaRoadImg from '../assets/images/chita_maira_road_1786860842350.jpg';
+import morekalanRoadImg from '../assets/images/morekalan_road_1786860856404.jpg';
+import chitralSchoolImg from '../assets/images/chitral_school_1786860870346.jpg';
+import islamKotRoadImg from '../assets/images/islam_kot_road_1786860885424.jpg';
+import hamzaHeightsImg from '../assets/images/hamza_heights_1786860899601.jpg';
+import wapdaColonyHouseImg from '../assets/images/wapda_colony_house_1786861171901.jpg';
 
 export const HERO_IMAGES = {
   heroBanner: pkhaHighwayAsphaltImg || heroBannerImg,
@@ -17,6 +30,19 @@ export const HERO_IMAGES = {
   paradiseHousing: paradiseHousingImg,
   modernCivicComplex: modernCivicComplexImg,
   pkhaHighwayAsphalt: pkhaHighwayAsphaltImg,
+  tanwalHighwayRoad: tanwalHighwayRoadImg,
+  haripurPccRoad: haripurPccRoadImg,
+  abbottabadMairaRoad: abbottabadMairaRoadImg,
+  bandaPirRoad: bandaPirRoadImg,
+  terhanaBalaRoad: terhanaBalaRoadImg,
+  haripurCanalRoad: haripurCanalRoadImg,
+  shallyValleyHouse: shallyValleyHouseImg,
+  chitaMairaRoad: chitaMairaRoadImg,
+  morekalanRoad: morekalanRoadImg,
+  chitralSchool: chitralSchoolImg,
+  islamKotRoad: islamKotRoadImg,
+  hamzaHeights: hamzaHeightsImg,
+  wapdaColonyHouse: wapdaColonyHouseImg,
 };
 
 export const COMPANY_INFO = {
@@ -227,7 +253,7 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Client', value: 'Pakhtunkhwa Highways Authority (PKHA)' },
       { label: 'Work', value: 'Earthwork, Base Course & Black Topping' },
     ],
-    imageUrl: HERO_IMAGES.heroBanner,
+    imageUrl: HERO_IMAGES.tanwalHighwayRoad,
     highlights: [
       'Executed under strict PKHA highway engineering specifications.',
       'Includes safety road barriers and reflective road markings.',
@@ -236,58 +262,32 @@ export const PROJECTS_LIST: Project[] = [
   {
     sNo: 4,
     id: 'p4',
-    title: 'Construction of 8 Nos Flood Protection Walls (Pkg 1)',
-    titleUr: 'ضلع ہری پور میں 8 عدد فلڈ پروٹیکشن والز کی تعمیر',
-    titlePs: 'په هریپور کې د ۸ سیلاب مخنیوي دیوالونو جوړول',
+    title: 'Construction of Flood Protection Walls in District Haripur (16 Nos)',
+    titleUr: 'ضلع ہری پور میں فلڈ پروٹیکشن والز کی تعمیر (16 عدد پیکیجز)',
+    titlePs: 'په هریپور کې د ۱۶ سیلاب مخنیوي دیوالونو لویه پروژه',
     category: 'irrigation',
     client: 'Irrigation Department Haripur',
     location: 'Different Places in District Haripur',
-    contractValue: 'PKR 83.00 Million',
-    scopeOfWork: 'RRM Stone Protection Wall',
+    contractValue: 'PKR 166.00 Million',
+    scopeOfWork: 'RRM Stone Protection Wall & Embankment Works',
     completionYear: '2025',
     status: 'In Progress',
-    description: 'Construction of 8 heavy-duty Random Rubble Masonry (RRM) stone flood protection walls across critical riverbed and nullah flash points to shield agricultural lands and villages.',
+    description: 'Comprehensive project for the construction of 16 heavy-duty Random Rubble Masonry (RRM) stone flood protection walls across critical riverbed and nullah flash points in District Haripur, shielding vast agricultural lands and rural settlements.',
     specifications: [
-      { label: 'Quantity', value: '8 Nos Protection Walls' },
-      { label: 'Contract Value', value: 'PKR 83.00 Million' },
+      { label: 'Total Quantity', value: '16 Nos Protection Walls' },
+      { label: 'Contract Value', value: 'PKR 166.00 Million' },
       { label: 'Client', value: 'Irrigation Department Haripur' },
       { label: 'Structure Type', value: 'RRM Stone Masonry & Wire Gabions' },
     ],
     imageUrl: HERO_IMAGES.riverBridge,
     highlights: [
-      'Heavy boulder stone masonry engineered against flash flood currents.',
-      'Secures surrounding settlements and vital irrigation canals.',
+      'Heavy boulder stone masonry engineered against high velocity flash floods.',
+      'Secures surrounding settlements and vital irrigation riverbanks.',
     ],
   },
   {
     sNo: 5,
     id: 'p5',
-    title: 'Construction of 8 Nos Flood Protection Walls (Pkg 2)',
-    titleUr: 'ضلع ہری پور میں 8 عدد فلڈ پروٹیکشن والز (پیکیج 2)',
-    titlePs: 'په هریپور کې د ۸ فلډ والونو پروژه دویمه برخه',
-    category: 'irrigation',
-    client: 'Irrigation Department Haripur',
-    location: 'Different Places in District Haripur',
-    contractValue: 'PKR 83.00 Million',
-    scopeOfWork: 'RRM Stone Protection Wall',
-    completionYear: '2025',
-    status: 'In Progress',
-    description: 'Secondary package of 8 RRM stone flood protection barriers along critical drainage channels in District Haripur, providing comprehensive riverbank stabilization.',
-    specifications: [
-      { label: 'Scope', value: '8 Nos RRM Protection Walls' },
-      { label: 'Contract Value', value: 'PKR 83.00 Million' },
-      { label: 'Client', value: 'Irrigation Department Haripur' },
-      { label: 'Status', value: 'Active On-Site Execution' },
-    ],
-    imageUrl: HERO_IMAGES.riverBridge,
-    highlights: [
-      'Deep foundation toe wall excavation in rocky riverbeds.',
-      'Heavy machinery fleet mobilized for continuous stone transport.',
-    ],
-  },
-  {
-    sNo: 6,
-    id: 'p6',
     title: 'PCC Roads in District Haripur',
     titleUr: 'ضلع ہری پور میں پی سی سی کنکریٹ سڑکوں کی تعمیر',
     titlePs: 'په هریپور کې د پی سي سي کانکریټي سړکونو پروژه',
@@ -305,15 +305,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Pavement Type', value: 'Rigid PCC Concrete' },
       { label: 'Progress', value: '70% Completed' },
     ],
-    imageUrl: HERO_IMAGES.heroBanner,
+    imageUrl: HERO_IMAGES.haripurPccRoad,
     highlights: [
       'High-compression concrete mix designed for heavy traffic and water resistance.',
       'Integrated open and covered stormwater side drains.',
     ],
   },
   {
-    sNo: 7,
-    id: 'p7',
+    sNo: 6,
+    id: 'p6',
     title: 'Construction of Canal Road (3.00 KM)',
     titleUr: 'کینال روڈ ضلع ہری پور کی تعمیر (3.00 کلومیٹر)',
     titlePs: 'د کانال سړک ۳.۰۰ کلومیټره باوري پروژه',
@@ -331,15 +331,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Client', value: 'Irrigation Department' },
       { label: 'Progress', value: '90% Completed' },
     ],
-    imageUrl: HERO_IMAGES.heroBanner,
+    imageUrl: HERO_IMAGES.haripurCanalRoad,
     highlights: [
       'Rigorous canal embankment soil compaction.',
       'Culverts and stone riprap protection along water flow.',
     ],
   },
   {
-    sNo: 8,
-    id: 'p8',
+    sNo: 7,
+    id: 'p7',
     title: 'Black Top of Maira Madroch Road (2.00 KM)',
     titleUr: 'مائرہ مدروچ روڈ ضلع ایبٹ آباد پر بلیک ٹاپ (2.00 کلومیٹر)',
     titlePs: 'د مائره مدروچ سړک قیر کول ۲.۰۰ کلومیټره',
@@ -357,15 +357,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Client', value: 'TMA Abbottabad' },
       { label: 'Status', value: '100% Completed' },
     ],
-    imageUrl: HERO_IMAGES.heroBanner,
+    imageUrl: HERO_IMAGES.abbottabadMairaRoad,
     highlights: [
       'High-altitude asphalt compaction and hill slope protection.',
       'Completed within target schedule under TMA oversight.',
     ],
   },
   {
-    sNo: 9,
-    id: 'p9',
+    sNo: 8,
+    id: 'p8',
     title: 'Black Topping of Banda Pir Khan Road (2.00 KM)',
     titleUr: 'بانڈہ پیر خان روڈ ضلع ایبٹ آباد کی بلیک ٹاپنگ (2.00 کلومیٹر)',
     titlePs: 'د بانډه پیر خان سړک ۲ کلومیټره قیر او د بیارغونې کار',
@@ -383,15 +383,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Client', value: 'Communication & Works Department (C&W)' },
       { label: 'Status', value: '100% Completed' },
     ],
-    imageUrl: HERO_IMAGES.heroBanner,
+    imageUrl: HERO_IMAGES.bandaPirRoad,
     highlights: [
       'Comprehensive road alignment rectification.',
       'C&W quality inspected and certified for public transit.',
     ],
   },
   {
-    sNo: 10,
-    id: 'p10',
+    sNo: 9,
+    id: 'p9',
     title: 'Black Topping of Terhana Bala Road (1.50 KM)',
     titleUr: 'تیرہنہ بالا روڈ ضلع ایبٹ آباد کی بلیک ٹاپنگ (1.50 کلومیٹر)',
     titlePs: 'د تیرهنه بالا سړک ۱.۵۰ کلومیټره قیر پروژه',
@@ -409,15 +409,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Client', value: 'Communication & Works Department (C&W)' },
       { label: 'Status', value: '100% Completed' },
     ],
-    imageUrl: HERO_IMAGES.heroBanner,
+    imageUrl: HERO_IMAGES.terhanaBalaRoad,
     highlights: [
       'Mountain slope retaining wall stabilization.',
       'High-grade bitumen mix for severe weather durability.',
     ],
   },
   {
-    sNo: 11,
-    id: 'p11',
+    sNo: 10,
+    id: 'p10',
     title: 'Flood Protection Wall at Dag Basud Pabbi',
     titleUr: 'داگ بسود پبی ضلع نوشہرہ میں فلڈ پروٹیکشن وال کی تعمیر',
     titlePs: 'په داګ بسود پبي نوشهره کې د سیلاب مخنیوي دیوال',
@@ -442,8 +442,8 @@ export const PROJECTS_LIST: Project[] = [
     ],
   },
   {
-    sNo: 12,
-    id: 'p12',
+    sNo: 11,
+    id: 'p11',
     title: 'Construction of Double Storey House at Shally Valley',
     titleUr: 'شیلی ویلی ایبٹ آباد میں ڈبل اسٹوری رہائشی گھر کی تعمیر',
     titlePs: 'په شیلې ویلي ایبټ اباد کې د دوه پوړیزه کور جوړول',
@@ -461,15 +461,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Scope', value: 'Full Civil + MEP + Finishing' },
       { label: 'Status', value: 'Under Construction' },
     ],
-    imageUrl: HERO_IMAGES.buildingConstruction,
+    imageUrl: HERO_IMAGES.shallyValleyHouse,
     highlights: [
       'Custom architectural design with thermal insulation.',
       'High-end imported sanitary and electrical fixtures.',
     ],
   },
   {
-    sNo: 13,
-    id: 'p13',
+    sNo: 12,
+    id: 'p12',
     title: 'Construction of Residential House at Wapda Colony',
     titleUr: 'واپڈا کالونی نوشہرہ میں رہائشی گھر کی تعمیر',
     titlePs: 'په واپډا کالونۍ نوشهره کې د استوګنې کور جوړول',
@@ -487,15 +487,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Location', value: 'Wapda Colony, Nowshera' },
       { label: 'Status', value: 'In Progress' },
     ],
-    imageUrl: HERO_IMAGES.buildingConstruction,
+    imageUrl: HERO_IMAGES.wapdaColonyHouse,
     highlights: [
       'Earthquake resilient design and premium foundation piling.',
       'Full MEP execution with backup generator integration.',
     ],
   },
   {
-    sNo: 14,
-    id: 'p14',
+    sNo: 13,
+    id: 'p13',
     title: 'Black Top of Chita Maira Road (1.50 KM)',
     titleUr: 'چیٹا مائرہ روڈ ضلع ایبٹ آباد کی بلیک ٹاپنگ (1.50 کلومیٹر)',
     titlePs: 'د چیټا مائره سړک ۱.۵۰ کلومیټره قیر کول',
@@ -513,15 +513,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Client', value: 'Communication & Works Department (C&W)' },
       { label: 'Status', value: '100% Completed' },
     ],
-    imageUrl: HERO_IMAGES.heroBanner,
+    imageUrl: HERO_IMAGES.chitaMairaRoad,
     highlights: [
       'Dense graded asphalt concrete surface.',
       'Complete road edge safety protections.',
     ],
   },
   {
-    sNo: 15,
-    id: 'p15',
+    sNo: 14,
+    id: 'p14',
     title: 'Black Top of Morekalan Road (1.50 KM)',
     titleUr: 'موریکلاں روڈ ضلع ایبٹ آباد کی بلیک ٹاپنگ (1.50 کلومیٹر)',
     titlePs: 'د موریکلاں سړک ۱.۵۰ کلومیټره اسفالټ او د سړک کار',
@@ -539,15 +539,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Client', value: 'Communication & Works Department (C&W)' },
       { label: 'Status', value: '100% Completed' },
     ],
-    imageUrl: HERO_IMAGES.heroBanner,
+    imageUrl: HERO_IMAGES.morekalanRoad,
     highlights: [
       'Laser leveled asphalt finish for smooth vehicular transit.',
       'Delivered on schedule with positive C&W inspection review.',
     ],
   },
   {
-    sNo: 16,
-    id: 'p16',
+    sNo: 15,
+    id: 'p15',
     title: 'Govt: Middle School Riri Owir UC Owir',
     titleUr: 'گورنمنٹ مڈل اسکول ریری اویر یو سی اویر، ضلع چترال',
     titlePs: 'د ریری اویر یو سي اویر چترال دولتي منځني ښوونځي ودانۍ',
@@ -565,15 +565,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Client', value: 'Communication & Works Department (C&W)' },
       { label: 'Status', value: 'Finishing Work in Progress' },
     ],
-    imageUrl: HERO_IMAGES.buildingConstruction,
+    imageUrl: HERO_IMAGES.chitralSchool,
     highlights: [
       'Extreme mountain logistics managed seamlessly.',
       'Earthquake-reinforced concrete structure with safe student play areas.',
     ],
   },
   {
-    sNo: 17,
-    id: 'p17',
+    sNo: 16,
+    id: 'p16',
     title: 'Black Topping of Islam Kot Road (1.00 KM)',
     titleUr: 'اسلام کوٹ روڈ ضلع ایبٹ آباد کی بلیک ٹاپنگ (1.00 کلومیٹر)',
     titlePs: 'د اسلام کوټ سړک ۱.۰۰ کلومیټره قیر کار',
@@ -591,15 +591,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Client', value: 'TMA Abbottabad' },
       { label: 'Status', value: '100% Completed' },
     ],
-    imageUrl: HERO_IMAGES.heroBanner,
+    imageUrl: HERO_IMAGES.islamKotRoad,
     highlights: [
       'Subgrade stabilization and asphalt surface course.',
       'Commissioned for public transit.',
     ],
   },
   {
-    sNo: 18,
-    id: 'p18',
+    sNo: 17,
+    id: 'p17',
     title: 'PCC Road Pabbi District Nowshera',
     titleUr: 'پی سی سی روڈ پبی ضلع نوشہرہ کی تعمیر',
     titlePs: 'د پبي نوشهره کانکریټي پی سي سي سړک جوړول',
@@ -617,15 +617,15 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Client', value: 'TMA' },
       { label: 'Pavement Type', value: 'PCC Concrete + Side Drains' },
     ],
-    imageUrl: HERO_IMAGES.heroBanner,
+    imageUrl: HERO_IMAGES.haripurPccRoad,
     highlights: [
       'Heavy duty rigid pavement resisting heavy axle loads.',
       'Completed in home base of Pabbi Nowshera.',
     ],
   },
   {
-    sNo: 19,
-    id: 'p19',
+    sNo: 18,
+    id: 'p18',
     title: 'Construction of Residential Flat (Hamza Height)',
     titleUr: 'حمزہ ہائٹ رہائشی فلیٹس کمپلیکس کی تعمیر',
     titlePs: 'د حمزه هايټس د استوګنې اپارتمانونو لويه پروژه',
@@ -643,7 +643,7 @@ export const PROJECTS_LIST: Project[] = [
       { label: 'Scope', value: 'Complete Civil, MEP & Architectural Finishes' },
       { label: 'Status', value: '100% Completed' },
     ],
-    imageUrl: HERO_IMAGES.buildingConstruction,
+    imageUrl: HERO_IMAGES.hamzaHeights,
     highlights: [
       'Highest value private building project (PKR 250 Million).',
       'Turn-key execution from foundation raft to interior tile and sanitary fittings.',
