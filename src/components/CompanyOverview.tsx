@@ -137,9 +137,9 @@ export const CompanyOverview: React.FC<CompanyOverviewProps> = ({ currentLang })
                   <strong className="text-white">{COMPANY_INFO.taxOffice}</strong>
                 </div>
                 <div className="flex items-center justify-between pt-0.5">
-                  <span className="text-slate-400">Registered Office:</span>
-                  <strong className="text-white text-right text-[11px] max-w-[200px] truncate">
-                    Nowshera, KPK
+                  <span className="text-slate-400">Corporate HQ:</span>
+                  <strong className="text-white text-right text-[11px] max-w-[220px] truncate">
+                    Islamabad / KPK
                   </strong>
                 </div>
               </div>
@@ -206,7 +206,7 @@ export const CompanyOverview: React.FC<CompanyOverviewProps> = ({ currentLang })
               <div className="flex items-center gap-2">
                 <FileBadge className="w-5 h-5 text-amber-400 shrink-0" />
                 <span className="text-xs font-bold text-slate-200 uppercase tracking-wide">
-                  Official Address: Khush Maqam, Taru Jabba, Tehsil Pabbi, District Nowshera, KPK
+                  Corporate HQ: Burj Al Bilal Plaza, Jinnah Ave, DHA Double Road, Islamabad | Reg. Office: Nowshera
                 </span>
               </div>
               <span className="text-xs font-black uppercase text-slate-950 bg-amber-400 px-3 py-1 border border-slate-950">

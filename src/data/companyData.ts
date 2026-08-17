@@ -20,6 +20,13 @@ import chitralSchoolImg from '../assets/images/chitral_school_1786860870346.jpg'
 import islamKotRoadImg from '../assets/images/islam_kot_road_1786860885424.jpg';
 import hamzaHeightsImg from '../assets/images/hamza_heights_1786860899601.jpg';
 import wapdaColonyHouseImg from '../assets/images/wapda_colony_house_1786861171901.jpg';
+import catExcavatorImg from '../assets/images/cat_excavator_1786949802600.jpg';
+import asphaltPaverImg from '../assets/images/asphalt_paver_1786949814332.jpg';
+import tandemRollerImg from '../assets/images/tandem_roller_1786949825238.jpg';
+import batchingPlantImg from '../assets/images/batching_plant_1786949835444.jpg';
+import motorGraderImg from '../assets/images/motor_grader_1786949847034.jpg';
+import hydraulicCraneImg from '../assets/images/hydraulic_crane_1786949858673.jpg';
+import dumpTrucksImg from '../assets/images/dump_trucks_1786949869483.jpg';
 
 export const HERO_IMAGES = {
   heroBanner: pkhaHighwayAsphaltImg || heroBannerImg,
@@ -43,6 +50,13 @@ export const HERO_IMAGES = {
   islamKotRoad: islamKotRoadImg,
   hamzaHeights: hamzaHeightsImg,
   wapdaColonyHouse: wapdaColonyHouseImg,
+  catExcavator: catExcavatorImg,
+  asphaltPaver: asphaltPaverImg,
+  tandemRoller: tandemRollerImg,
+  batchingPlant: batchingPlantImg,
+  motorGrader: motorGraderImg,
+  hydraulicCrane: hydraulicCraneImg,
+  dumpTrucks: dumpTrucksImg,
 };
 
 export const COMPANY_INFO = {
@@ -81,9 +95,11 @@ export const COMPANY_INFO = {
   workforceCount: '350+',
   ceoName: 'Mr. Azmat Ullah',
   ceoTitle: 'Managing Director',
-  headOfficeAddress: 'Khush Maqam, Post Box Taru Jabba, Tehsil Pabbi, District Nowshera, KPK, Pakistan',
-  address: 'Khush Maqam, Post Box Taru Jabba, Tehsil Pabbi, District Nowshera, KPK, Pakistan',
-  siteOfficeAddress: 'Branch & Regional Project Offices in Haripur, Abbottabad, Nowshera, Peshawar, Chitral & Havelian',
+  headOfficeAddress: 'Suit #1, 1st Floor, Burj Al Bilal Plaza, Jinnah Avenue, Margalla Enclave, DHA Main Double Road, Islamabad, Pakistan',
+  address: 'Suit #1, 1st Floor, Burj Al Bilal Plaza, Jinnah Avenue, Margalla Enclave, DHA Main Double Road, Islamabad, Pakistan',
+  islamabadAddress: 'Suit #1, 1st Floor, Burj Al Bilal Plaza, Jinnah Avenue, Margalla Enclave, DHA Main Double Road, Islamabad, Pakistan',
+  regionalOfficeAddress: 'Khush Maqam, Post Box Taru Jabba, Tehsil Pabbi, District Nowshera, KPK, Pakistan',
+  siteOfficeAddress: 'Regional & Site Offices: Nowshera (KPK), Haripur, Abbottabad, Peshawar, Chitral & Havelian',
   phone1: '+92 333 9331030',
   phone2: '+92 312 1212959',
   whatsapp: '+92 312 1212959',
@@ -662,6 +678,7 @@ export const EQUIPMENT_FLEET: Equipment[] = [
     capacity: '2.1 m³ Bucket Capacity / 30 Ton Operating Weight',
     status: 'Operational / On Site',
     iconName: 'Construction',
+    imageUrl: HERO_IMAGES.catExcavator,
   },
   {
     id: 'e2',
@@ -672,6 +689,7 @@ export const EQUIPMENT_FLEET: Equipment[] = [
     capacity: '10 Meter Max Paving Width / 700 TPH Output',
     status: 'Operational / On Site',
     iconName: 'Road',
+    imageUrl: HERO_IMAGES.asphaltPaver,
   },
   {
     id: 'e3',
@@ -682,6 +700,7 @@ export const EQUIPMENT_FLEET: Equipment[] = [
     capacity: '12 to 18 Ton Compaction Weight',
     status: 'Available for Rent',
     iconName: 'Wrench',
+    imageUrl: HERO_IMAGES.tandemRoller,
   },
   {
     id: 'e4',
@@ -692,6 +711,7 @@ export const EQUIPMENT_FLEET: Equipment[] = [
     capacity: '60 cubic meters per hour wet concrete mix',
     status: 'Operational / On Site',
     iconName: 'Building',
+    imageUrl: HERO_IMAGES.batchingPlant,
   },
   {
     id: 'e5',
@@ -702,6 +722,7 @@ export const EQUIPMENT_FLEET: Equipment[] = [
     capacity: '14ft Moldboard / Precision Laser Leveling System',
     status: 'Operational / On Site',
     iconName: 'Wrench',
+    imageUrl: HERO_IMAGES.motorGrader,
   },
   {
     id: 'e6',
@@ -712,6 +733,7 @@ export const EQUIPMENT_FLEET: Equipment[] = [
     capacity: '50 Ton Lifting Capacity / 43m Boom Length',
     status: 'Available for Rent',
     iconName: 'Truck',
+    imageUrl: HERO_IMAGES.hydraulicCrane,
   },
   {
     id: 'e7',
@@ -722,6 +744,7 @@ export const EQUIPMENT_FLEET: Equipment[] = [
     capacity: '25 Ton / 18 Cubic Meter Body Volume',
     status: 'Operational / On Site',
     iconName: 'Truck',
+    imageUrl: HERO_IMAGES.dumpTrucks,
   },
 ];
 
@@ -832,7 +855,7 @@ export const FAQ_LIST: FAQItem[] = [
   },
   {
     question: 'Who is the Managing Director and where is the registered office located?',
-    answer: 'The Managing Director is Mr. Azmat Ullah. Our registered office is located at Khush Maqam, Post Box Taru Jabba, Tehsil Pabbi, District Nowshera, KPK, Pakistan. Contact: +92 333 9331030 / WhatsApp: +92 312 1212959 / Email: azmatullahbrothernssr@gmail.com.',
+    answer: 'The Managing Director is Mr. Azmat Ullah. Our Corporate Head Office is located at Suit #1, 1st Floor, Burj Al Bilal Plaza, Jinnah Avenue, Margalla Enclave, DHA Main Double Road, Islamabad, Pakistan, with Regional Office at Khush Maqam, Taru Jabba, Tehsil Pabbi, District Nowshera, KPK. Contact: +92 333 9331030 / WhatsApp: +92 312 1212959 / Email: azmatullahbrothernssr@gmail.com.',
     category: 'Contact & Location',
   },
   {

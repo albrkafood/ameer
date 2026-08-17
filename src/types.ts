@@ -54,6 +54,7 @@ export interface Equipment {
   capacity: string;
   status: 'Operational / On Site' | 'Available for Rent' | 'Under Maintenance';
   iconName: string;
+  imageUrl?: string;
 }
 
 export interface Certification {

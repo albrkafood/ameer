@@ -101,11 +101,19 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ currentLang }) =
                 <div className="p-3 bg-amber-400 text-slate-950 font-black border border-slate-950 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] shrink-0">
                   <Building className="w-5 h-5" />
                 </div>
-                <div>
-                  <h4 className="font-black text-xs uppercase tracking-widest text-amber-400 bg-slate-950 p-1 border border-slate-800 inline-block mb-1">
-                    Registered Office &amp; Engineering HQ
-                  </h4>
-                  <p className="text-xs font-semibold text-slate-200 leading-relaxed">{COMPANY_INFO.address}</p>
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="font-black text-xs uppercase tracking-widest text-amber-400 bg-slate-950 p-1 border border-slate-800 inline-block mb-1">
+                      Corporate Head Office (Islamabad)
+                    </h4>
+                    <p className="text-xs font-semibold text-slate-100 leading-relaxed">{COMPANY_INFO.address}</p>
+                  </div>
+                  <div className="pt-2 border-t border-slate-800">
+                    <h5 className="font-bold text-[11px] uppercase tracking-wider text-slate-400 mb-0.5">
+                      Regional Branch Office (KPK):
+                    </h5>
+                    <p className="text-[11px] text-slate-300 font-medium">{COMPANY_INFO.regionalOfficeAddress}</p>
+                  </div>
                 </div>
               </div>
 
@@ -371,17 +379,17 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ currentLang }) =
                 </p>
 
                 <div className="grid grid-cols-2 gap-2 text-xs font-bold uppercase pt-2 w-full max-w-md">
-                  <span className="bg-slate-950 p-2.5 border border-slate-800 text-slate-200">
-                    📍 Nowshera Main HQ
+                  <span className="bg-slate-950 p-2.5 border border-amber-400 text-amber-400 font-black">
+                    🏛️ Islamabad Corporate HQ
                   </span>
                   <span className="bg-slate-950 p-2.5 border border-slate-800 text-slate-200">
-                    📍 Peshawar Site Division
+                    🏢 Nowshera Regional Office
                   </span>
                   <span className="bg-slate-950 p-2.5 border border-slate-800 text-slate-200">
-                    📍 Mardan / Swabi Office
+                    🏗️ Haripur &amp; Abbottabad
                   </span>
                   <span className="bg-slate-950 p-2.5 border border-slate-800 text-slate-200">
-                    📍 Dir &amp; Malakand Site Camp
+                    🏔️ Chitral &amp; Peshawar Division
                   </span>
                 </div>
               </div>
