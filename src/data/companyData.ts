@@ -104,8 +104,8 @@ export const COMPANY_INFO = {
   phone2: '+92 312 1212959',
   whatsapp: '+92 312 1212959',
   email: 'azmatullahbrothernssr@gmail.com',
-  officialEmailAlt: 'info@asmatullahbrothers.com',
-  tenderEmail: 'azmatullahbrothernssr@gmail.com',
+  officialEmailAlt: 'tender@abgovtcontbuilders.com',
+  tenderEmail: 'tender@abgovtcontbuilders.com',
   taglinesList: [
     'Committed to superior quality and results.',
     'Broad vision. Careful thought. Hand-crafted design.',
@@ -855,7 +855,7 @@ export const FAQ_LIST: FAQItem[] = [
   },
   {
     question: 'Who is the Managing Director and where is the registered office located?',
-    answer: 'The Managing Director is Mr. Azmat Ullah. Our Corporate Head Office is located at Suit #1, 1st Floor, Burj Al Bilal Plaza, Jinnah Avenue, Margalla Enclave, DHA Main Double Road, Islamabad, Pakistan, with Regional Office at Khush Maqam, Taru Jabba, Tehsil Pabbi, District Nowshera, KPK. Contact: +92 333 9331030 / WhatsApp: +92 312 1212959 / Email: azmatullahbrothernssr@gmail.com.',
+    answer: 'The Managing Director is Mr. Azmat Ullah. Our Corporate Head Office is located at Suit #1, 1st Floor, Burj Al Bilal Plaza, Jinnah Avenue, Margalla Enclave, DHA Main Double Road, Islamabad, Pakistan, with Regional Office at Khush Maqam, Taru Jabba, Tehsil Pabbi, District Nowshera, KPK. Contact: +92 333 9331030 / WhatsApp: +92 312 1212959 / Tender Email: tender@abgovtcontbuilders.com / azmatullahbrothernssr@gmail.com.',
     category: 'Contact & Location',
   },
   {
